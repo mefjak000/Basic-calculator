@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shourtcut icon" href="icon/icons8-calculator-32.ico">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+<div id="container">
+    <div id="form-container">
+        <form id="myForm">
+            <table align="center">
+                <tr>
+                    <td colspan=4>
+                        <input type="text" class="calc-area" id="compArea" value="0" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="op-num-btn" id="btnC" value="+">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="btnMod" value="-">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="btnPow" value="*">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="btnDivi" value="/">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num7" value="7">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num8" value="8">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num9" value="9">
+                    </td>
+                    <td rowspan=4>
+                        <input type="button" class="result-btn" id="result" value="=">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num6" value="4">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num5" value="5">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num4" value="6">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num1" value="1">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num2" value="2">
+                    </td>
+                    <td>
+                        <input type="button" class="op-num-btn" id="num3" value="3">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" class="op-num-btn" id="num0" value="0">
+                    </td>
+                    <!-- <td>
+                        <input type="button" class="op-num-btn" id="dot" value=".">
+                    </td> -->
+                    <td>
+                        <input type="button" class="all-clear-btn" id="numAC" value="AC">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

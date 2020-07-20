@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+html{
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to left bottom, #00ffde, #00d6e2, #00acd8, #0082bf, #075898);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+table {
+    background-color: rgba(46, 46, 46, 0.6)
+}
+
+table, th, td {
+    border-radius: 30px;
+}
+
+th, td {
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+input, #result {
+    background-color: #fff;
+    padding: 10px;
+    width: 60px;
+    height: 340px;
+    font-size: 25px;
+    text-align: center;
+}
+
+input, .all-clear-btn {
+    width: 60px;
+    font-size: 25px;
+    text-align: center;
+}
+
+input {
+    background-color: #fff;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+    margin: 2px 2px 10px 2px;
+}
+
+input:active {
+  background-color: #959595;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input:disabled, .calc-area {
+    font-size: 40px;
+    width: 300px;
+    padding: 10px;
+    color: #000;
+    text-align: left;
+    cursor: default;
+    box-shadow: 0;
+    background-color: #fff;
+    box-shadow: none;
+    transform: translateY(0px);
+}
+
+#num0{
+    width: 150px;
+}
