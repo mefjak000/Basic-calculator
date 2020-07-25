@@ -1,6 +1,6 @@
 # Basic calculator
 ***Simple calculator in JS***
-## Version v1.1
+## Version 1.1
 - ### Design
   ![Test](icon/calculator%20design%20by%20MT.png)
 - ### Changes!
