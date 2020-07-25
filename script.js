@@ -52,10 +52,6 @@ class Calculator {
         this.currentNum = parseFloat(this.currentNum).toString();
     };
 
-    modulo() {
-
-    };
-
     chooseNum(number) {
         if (number === '.' || this.currentNum.includes('.')){
             if (number === '.' && this.currentNum.includes('.')) return;
@@ -110,9 +106,6 @@ getOperatorButtonsVal.forEach((button) => {
     button.addEventListener('click', () => {
         calc.chooseOperation(button.innerHTML);
         calc.display();
-
-        // test log
-        console.log(button.innerHTML);
     });
 });
 
@@ -120,38 +113,22 @@ getOperatorButtonsVal.forEach((button) => {
 getCancelButtonVal.addEventListener('click', () => {
     calc.clear();
     calc.display();
-
-    // test log
-    console.log(getCancelButtonVal.innerHTML);
 });
 
 // event handling for negation button
 getNegationButtonVal.addEventListener('click', () => {
     calc.negation();
     calc.display();
-
-    console.log(getNegationButtonVal.innerHTML);
-});
-
-// event handling for modulo button
-getModuloButtonVal.addEventListener('click', () => {
-    console.log(getModuloButtonVal.innerHTML);
 });
 
 // event handling for delete button
 getDeleteButtonVal.addEventListener('click', () => {
     calc.delete();
     calc.display()
-
-    // test log
-    console.log(getDeleteButtonVal.innerHTML);
 });
 
 // event handling for equal button
 getEqualButtonVal.addEventListener('click', () => {
     calc.calculate();
     calc.display();
-
-    // test log
-    console.log(getEqualButtonVal.innerHTML);
 });
