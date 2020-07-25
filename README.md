@@ -6,7 +6,7 @@
 - ### Changes!
 
   - [x] ***Modern ES6 JavaScript***
-  - [x] ***Modern CSS***
+  - [x] ***Modern CSS3***
   - [x] ***Modern HTML5***
 
 - ### Coming soon!
