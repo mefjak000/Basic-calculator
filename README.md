@@ -12,5 +12,6 @@
 - ### Coming soon!
 
   - [ ] ***Operations on many inputs***
+  - [ ] ***Result overflow control***
   - [ ] ***TypeScript version***
   - [ ] ***Themes!***
