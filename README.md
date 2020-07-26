@@ -8,7 +8,7 @@
   - [x] ***Modern ES6 JavaScript***
   - [x] ***Modern CSS3***
   - [x] ***Modern HTML5***
-  - [x] ***Operations on many inputs values***
+  - [x] ***Operations on many input values***
 
 - ### Coming soon!
 
