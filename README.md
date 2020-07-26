@@ -8,10 +8,10 @@
   - [x] ***Modern ES6 JavaScript***
   - [x] ***Modern CSS3***
   - [x] ***Modern HTML5***
+  - [x] ***Operations on many inputs values***
 
 - ### Coming soon!
 
-  - [ ] ***Operations on many inputs***
-  - [ ] ***Result overflow control***
+  - [ ] ***Result element overflow control***
   - [ ] ***TypeScript version***
   - [ ] ***Themes!***
