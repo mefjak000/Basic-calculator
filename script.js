@@ -7,17 +7,20 @@ class Calculator {
         this.historyNum = '';
     };
 
+    // clearing all outputs - method
     clear() {
         this.currentNum = '0';
         this.historyNum = '';
     };
 
+    // deleting one value - method
     delete() {
         if (this.currentNum.length === 1) return this.currentNum = '0';
         if (this.currentNum === '0') return;
         this.currentNum = this.currentNum.slice(0, -1);
     };
 
+    // calculating result - method
     calculate() {
         let calculation;
         const hist = parseFloat(this.historyNum);
@@ -47,11 +50,13 @@ class Calculator {
         this.historyNum = ''
     };
 
+    // negation - method
     negation() {
         this.currentNum *= -1;
         this.currentNum = parseFloat(this.currentNum).toString();
     };
 
+    // choosing clicked number - method
     chooseNum(number) {
         if (number === '.' || this.currentNum.includes('.')){
             if (number === '.' && this.currentNum.includes('.')) return;
@@ -59,15 +64,20 @@ class Calculator {
         } else {
             this.currentNum = this.currentNum.toString() + number.toString();
             this.currentNum = parseFloat(this.currentNum).toString();
-        }
+        };
     };
 
+    // choosing clicked operation - method
     chooseOperation(operation) {
+        if (this.historyNum !== '') {
+            this.calculate()
+        };
         this.operation = operation;
         this.historyNum = this.currentNum.toString() + this.operation.toString();
         this.currentNum = '0';
     };
 
+    // displaying values - method
     display() {
         this.currentNumTextElementVal.innerHTML = this.currentNum;
         this.historyNumTextElementVal.innerHTML = this.historyNum;
@@ -95,9 +105,6 @@ getNumberButtonsVal.forEach((button) => {
     button.addEventListener('click', () => {
         calc.chooseNum(button.innerHTML);
         calc.display();
-
-        // test log
-        console.log(button.innerHTML);
     });
 });
 
