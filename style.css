@@ -43,7 +43,6 @@ body{
 .result-output {
     color: rgb(255, 255, 255);
     font-size: 60px;
-    height: 120px;
     width: 280px;
 }
 
@@ -51,6 +50,11 @@ body{
     padding: 15px 5px;
     text-align: right;
     overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.result-output-value {
+    height: 90px;
 }
 
 .keyboard-container {
