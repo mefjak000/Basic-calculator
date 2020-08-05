@@ -9,9 +9,8 @@
   - [x] ***Modern CSS3***
   - [x] ***Modern HTML5***
   - [x] ***Operations on many input values***
+  - [x] ***Overflow control***
 
 - ### Coming soon!
 
-  - [ ] ***Result element overflow control***
-  - [ ] ***TypeScript version***
   - [ ] ***Themes!***
