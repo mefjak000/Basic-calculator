@@ -1,7 +1,6 @@
-"use strict";
 // object of calculator
-class Calculator {
-    constructor(getHistoryOutputVal, getResultOutputVal) {
+var Calculator = /** @class */ (function () {
+    function Calculator(getHistoryOutputVal, getResultOutputVal) {
         this.currentNum = '0';
         this.historyNum = '';
         this.currentNumTextElementVal = getResultOutputVal;
@@ -11,25 +10,25 @@ class Calculator {
     }
     ;
     // clearing all outputs - method
-    clear() {
+    Calculator.prototype.clear = function () {
         this.currentNum = '0';
         this.historyNum = '';
-    }
+    };
     ;
     // deleting one value - method
-    delete() {
+    Calculator.prototype["delete"] = function () {
         if (this.currentNum.length === 1)
             return this.currentNum = '0';
         if (this.currentNum === '0')
             return;
         this.currentNum = this.currentNum.slice(0, -1);
-    }
+    };
     ;
     // calculating result - method
-    calculate() {
-        let calculation;
-        const hist = parseFloat(this.historyNum);
-        const curr = parseFloat(this.currentNum);
+    Calculator.prototype.calculate = function () {
+        var calculation;
+        var hist = parseFloat(this.historyNum);
+        var curr = parseFloat(this.currentNum);
         if (isNaN(hist) || curr === '0')
             return;
         switch (this.operation) {
@@ -52,18 +51,18 @@ class Calculator {
                 return;
         }
         ;
-        this.currentNum = calculation.toFixed(2).toString();
+        this.currentNum = calculation.toString();
         this.historyNum = '';
-    }
+    };
     ;
     // negation - method
-    negation() {
+    Calculator.prototype.negation = function () {
         this.currentNum *= -1;
         this.currentNum = parseFloat(this.currentNum).toString();
-    }
+    };
     ;
     // choosing clicked number - method
-    chooseNum(number) {
+    Calculator.prototype.chooseNum = function (number) {
         if (number === '.' || this.currentNum.includes('.')) {
             if (number === '.' && this.currentNum.includes('.'))
                 return;
@@ -74,10 +73,10 @@ class Calculator {
             this.currentNum = parseFloat(this.currentNum).toString();
         }
         ;
-    }
+    };
     ;
     // choosing clicked operation - method
-    chooseOperation(operation) {
+    Calculator.prototype.chooseOperation = function (operation) {
         if (this.historyNum !== '') {
             this.calculate();
         }
@@ -85,61 +84,62 @@ class Calculator {
         this.operation = operation;
         this.historyNum = this.currentNum.toString() + this.operation.toString();
         this.currentNum = '0';
-    }
+    };
     ;
     // displaying values - method
-    display() {
+    Calculator.prototype.display = function () {
         this.currentNumTextElementVal.innerHTML = this.currentNum;
         this.historyNumTextElementVal.innerHTML = this.historyNum;
-    }
+    };
     ;
-}
+    return Calculator;
+}());
 ;
 // outputs
-const getHistoryOutputVal = document.querySelector('.history-output-value');
-const getResultOutputVal = document.querySelector('.result-output-value');
+var getHistoryOutputVal = document.querySelector('.history-output-value');
+var getResultOutputVal = document.querySelector('.result-output-value');
 // buttons reference arrays
-const getNumberButtonsVal = document.querySelectorAll('.number-btn');
-const getOperatorButtonsVal = document.querySelectorAll('.operator-btn');
+var getNumberButtonsVal = document.querySelectorAll('.number-btn');
+var getOperatorButtonsVal = document.querySelectorAll('.operator-btn');
 // single button reference variables
-const getCancelButtonVal = document.querySelector('.cancel-btn');
-const getNegationButtonVal = document.querySelector('.negation-btn');
-const getModuloButtonVal = document.querySelector('.modulo-btn');
-const getDeleteButtonVal = document.querySelector('.del-btn');
-const getEqualButtonVal = document.querySelector('.equal-btn');
+var getCancelButtonVal = document.querySelector('.cancel-btn');
+var getNegationButtonVal = document.querySelector('.negation-btn');
+var getModuloButtonVal = document.querySelector('.modulo-btn');
+var getDeleteButtonVal = document.querySelector('.del-btn');
+var getEqualButtonVal = document.querySelector('.equal-btn');
 // calculator instance
-const calc = new Calculator(getHistoryOutputVal, getResultOutputVal);
+var calc = new Calculator(getHistoryOutputVal, getResultOutputVal);
 // event handling for numbers buttons
-getNumberButtonsVal.forEach((button) => {
-    button.addEventListener('click', () => {
+getNumberButtonsVal.forEach(function (button) {
+    button.addEventListener('click', function () {
         calc.chooseNum(button.innerHTML);
         calc.display();
     });
 });
 // event handling for operations buttons
-getOperatorButtonsVal.forEach((button) => {
-    button.addEventListener('click', () => {
+getOperatorButtonsVal.forEach(function (button) {
+    button.addEventListener('click', function () {
         calc.chooseOperation(button.innerHTML);
         calc.display();
     });
 });
 // event handling for cancel button
-getCancelButtonVal.addEventListener('click', () => {
+getCancelButtonVal.addEventListener('click', function () {
     calc.clear();
     calc.display();
 });
 // event handling for negation button
-getNegationButtonVal.addEventListener('click', () => {
+getNegationButtonVal.addEventListener('click', function () {
     calc.negation();
     calc.display();
 });
 // event handling for delete button
-getDeleteButtonVal.addEventListener('click', () => {
-    calc.delete();
+getDeleteButtonVal.addEventListener('click', function () {
+    calc["delete"]();
     calc.display();
 });
 // event handling for equal button
-getEqualButtonVal.addEventListener('click', () => {
+getEqualButtonVal.addEventListener('click', function () {
     calc.calculate();
     calc.display();
 });
