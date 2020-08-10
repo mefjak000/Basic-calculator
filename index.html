@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <link rel="shourtcut icon" href="icon/icons8-calculator-32.ico">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <title>Calculator</title>
 </head>
 <body>
+    <div class="popup-window">
+        <div class="popup-content-menu">
+            <div class="popup-header-menu">
+                <div class="popup-header-text">Themes</div>
+                <button class="popup-header-close">&times;</button>
+            </div>
+            <div class="popup-choose-menu">
+                <button class="theme-btn">Default</button>
+                <button class="theme-btn">Light</button>
+                <button class="theme-btn">Dark</button>
+                <button class="theme-btn">Red</button>
+            </div>
+        </div>
+    </div>
     <div class="calculator">
         <div class="calculator-container">
             <div class="output-container">
@@ -48,6 +63,11 @@
                     <button class="del-btn">del</button>
                     <button class="equal-btn">=</button>
                 </div>
+            </div>
+        </div>
+        <div class="options">
+            <div class="options-btn">
+                <div class="fas fa-cogs"></div>
             </div>
         </div>
     </div>

@@ -46,7 +46,7 @@ class Calculator {
                 return;
         };
 
-        this.currentNum = calculation.toFixed(2).toString();
+        this.currentNum = calculation.toString();
         this.historyNum = ''
     };
 
@@ -58,7 +58,7 @@ class Calculator {
 
     // choosing clicked number - method
     chooseNum(number) {
-        if (number === '.' || this.currentNum.includes('.')){
+        if (number === '.' || this.currentNum.includes('.')) {
             if (number === '.' && this.currentNum.includes('.')) return;
             this.currentNum = this.currentNum.toString() + number.toString();
         } else {
@@ -96,6 +96,10 @@ const getNegationButtonVal = document.querySelector('.negation-btn');
 const getModuloButtonVal = document.querySelector('.modulo-btn');
 const getDeleteButtonVal = document.querySelector('.del-btn');
 const getEqualButtonVal = document.querySelector('.equal-btn');
+// option & popup buttons
+const getClosePopupBtn = document.querySelector('.popup-header-close');
+const getOptionBtn = document.querySelector('.options-btn');
+const getAllThemesBtn = document.querySelectorAll('.theme-btn');
 
 // calculator instance
 const calc = new Calculator(getHistoryOutputVal, getResultOutputVal);
@@ -138,4 +142,36 @@ getDeleteButtonVal.addEventListener('click', () => {
 getEqualButtonVal.addEventListener('click', () => {
     calc.calculate();
     calc.display();
+});
+
+// event handling for popup close button
+getClosePopupBtn.addEventListener('click', () => {
+    document.querySelector('.popup-window').style.display = 'none';
+});
+
+// event handling for option button
+getOptionBtn.addEventListener('click', () => {
+    document.querySelector('.popup-window').style.display = 'flex';
+});
+
+// event handling for themes
+getAllThemesBtn.forEach((name) => {
+    name.addEventListener('click', () => {
+        switch (name.innerHTML) {
+            case 'Default':
+                document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #000000, #3e3244, #4c6d98, #00b5db, #00ffe9)';
+                break;
+            case 'Light':
+                document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #465f60, #728489, #a1aab1, #d1d3d8, #ffffff)';
+                break;
+            case 'Dark':
+                document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #000000, #1c1c1c, #313131, #484848, #606060)';
+                break;
+            case 'Red':
+                document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #292929, #492f4c, #7e2457, #b30042, #d30606)';
+                break;
+            default:
+                break;
+        }
+    });
 });
