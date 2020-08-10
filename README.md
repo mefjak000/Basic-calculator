@@ -12,7 +12,7 @@
   - [x] ***Modern HTML5***
   - [x] ***Operations on many input values***
   - [x] ***Overflow control***
-  - [x] ***basic TypeScript3 version***
+  - [x] ***Basic TypeScript3 version***
   - [x] ***Themes popup menu***
 
 - ### Coming soon!
