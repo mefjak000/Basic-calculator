@@ -1,18 +1,16 @@
-# Basic calculator
-***Simple calculator in JS***
-## Version 1.3.2
+# Version 1.3.2
+
+  - [x] ***ES6 JavaScript***
+  - [x] ***CSS3***
+  - [x] ***HTML5***
+
 - ### Design
   ![Calculator](icon/calculator%20design%20by%20MT.png)
   
   ![Themes menu](/icon/options.png)
-- ### Added!
 
-  - [x] ***Modern ES6 JavaScript***
-  - [x] ***Modern CSS3***
-  - [x] ***Modern HTML5***
-  - [x] ***Operations on many input values***
-  - [x] ***Overflow control***
-  - [x] ***Basic TypeScript3 version***
+- ### Change Log
+
   - [x] ***Background themes***
 
 - ### Coming soon!
