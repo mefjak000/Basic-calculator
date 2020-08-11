@@ -13,7 +13,7 @@
   - [x] ***Operations on many input values***
   - [x] ***Overflow control***
   - [x] ***Basic TypeScript3 version***
-  - [x] ***Themes popup menu***
+  - [x] ***Background themes***
 
 - ### Coming soon!
 
