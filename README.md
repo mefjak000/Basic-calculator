@@ -1,19 +1,19 @@
-# Version 1.3.2
+# Version 1.4.2
 
   - [x] ***ES6 JavaScript***
   - [x] ***CSS3***
   - [x] ***HTML5***
 
 - ### Design
-  ![Calculator](icon/calculator%20design%20by%20MT.png)
+  ![Calculator](/icon/themes.png)
   
   ![Themes menu](/icon/options.png)
 
 - ### Change Log
 
-  - [x] ***Background themes***
+  - [x] ***Improved background themes***
 
 - ### Coming soon!
 
-  - [ ] ***Themes!***
-  - [ ] ***Full TypeScript version!***
+  - [ ] ***Full TypeScript version***
+  - [ ] ***Bug fixes***
