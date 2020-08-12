@@ -5,7 +5,7 @@
   - [x] ***HTML5***
 
 - ### Design
-  ![](/icon/Design.png)
+  ![](/icon/design.png)
 
 - ### Change Log
 
