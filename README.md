@@ -1,4 +1,4 @@
-# Version 1.4.2
+# Version 1.4.3
 
   - [x] ***ES6 JavaScript***
   - [x] ***CSS3***
@@ -10,6 +10,10 @@
 - ### Change Log
 
   - [x] ***Improved background themes***
+  
+- ### Bug fixes
+
+  - [x] ***Displaying favicon*** 
 
 - ### Coming soon!
 
