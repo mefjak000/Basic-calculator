@@ -161,14 +161,14 @@ getAllThemesBtn.forEach((name) => {
             case 'Default':
                 document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #000000, #3e3244, #4c6d98, #00b5db, #00ffe9)';
                 break;
-            case 'Light':
-                document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #465f60, #728489, #a1aab1, #d1d3d8, #ffffff)';
-                break;
             case 'Dark':
                 document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #000000, #1c1c1c, #313131, #484848, #606060)';
                 break;
-            case 'Red':
-                document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #292929, #492f4c, #7e2457, #b30042, #d30606)';
+            case 'Green':
+                document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #001a0b, #104d23, #33862e, #6ac22c, #b1ff00)';
+                break;
+            case 'Purple':
+                document.documentElement.style.backgroundImage = 'linear-gradient(to left top, #0f0023, #361d58, #6e3190, #b140c5, #ff48f5)';
                 break;
             default:
                 break;
