@@ -5,9 +5,9 @@
   - [x] ***HTML5***
 
 - ### Design
-  ![Calculator](/icon/themes.png)
+  ![](icon/themes.png)
   
-  ![Themes menu](/icon/options.png)
+  ![](icon/opt.png)
 
 - ### Change Log
 
