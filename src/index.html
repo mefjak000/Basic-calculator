@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shourtcut icon" href="icon/icons8-calculator-32.ico">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="popup-window">
+        <div class="popup-content-menu">
+            <div class="popup-header-menu">
+                <div class="popup-header-text">Themes</div>
+                <button class="popup-header-close">&times;</button>
+            </div>
+            <div class="popup-choose-menu">
+                <button class="theme-btn">Default</button>
+                <button class="theme-btn">Dark</button>
+                <button class="theme-btn">Green</button>
+                <button class="theme-btn">Purple</button>
+            </div>
+        </div>
+    </div>
+    <div class="calculator">
+        <div class="calculator-container">
+            <div class="output-container">
+                <div class="history-output">
+                    <div class="value history-output-value"></div>
+                </div>
+                <div class="result-output">
+                    <div class="value result-output-value">0</div>
+                </div>
+            </div>
+            <div class="keyboard-container">
+                <div class="row-boxes row-1">
+                    <button class="cancel-btn">C</button>
+                    <button class="negation-btn">±</button>
+                    <button class="modulo-btn operator-btn">%</button>
+                    <button class="operator-btn">÷</button>
+                </div>
+                <div class="row-boxes row-2">
+                    <button class="number-btn">7</button>
+                    <button class="number-btn">8</button>
+                    <button class="number-btn">9</button>
+                    <button class="operator-btn">×</button>
+                </div>
+                <div class="row-boxes row-3">
+                    <button class="number-btn">4</button>
+                    <button class="number-btn">5</button>
+                    <button class="number-btn">6</button>
+                    <button class="operator-btn">-</button>
+                </div>
+                <div class="row-boxes row-4">
+                    <button class="number-btn">1</button>
+                    <button class="number-btn">2</button>
+                    <button class="number-btn">3</button>
+                    <button class="operator-btn">+</button>
+                </div>
+                <div class="row-boxes row-5">
+                    <button class="number-btn">0</button>
+                    <button class="number-btn">.</button>
+                    <button class="del-btn">del</button>
+                    <button class="equal-btn">=</button>
+                </div>
+            </div>
+        </div>
+        <div class="options">
+            <div class="options-btn">
+                <div class="fas fa-cogs"></div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
