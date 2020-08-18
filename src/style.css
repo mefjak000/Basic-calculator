@@ -7,6 +7,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    user-select: none;
 }
 
 body{
@@ -17,8 +18,17 @@ body{
     display: flex;
 }
 
+@keyframes popup-appear-background {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .popup-window {
-    background-color: #00000067;
+    background-color: #0000009d;
     width: 100%;
     height: 100%;
     padding: 0px;
@@ -28,10 +38,18 @@ body{
     z-index: 1;
     left: 0;
     top: 0;
+    animation: popup-appear-background .2s ease both;
+}
+
+@keyframes popup-appear-content-menu {
+    from {
+        transform: scale(3);
+        transform: translateX(-50%)
+    }
 }
 
 .popup-content-menu {
-    background-color: #fff;
+    background-color: #ffffff;
     width: 300px;
     height: 350px;
     border-radius: 1rem;
@@ -40,6 +58,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 5px;
+    animation: popup-appear-content-menu .3s ease-in both;
 }
 
 .popup-header-menu {
@@ -65,22 +84,29 @@ body{
     width: 35px;
     height: 35px;
     background-color: #ce0000;
-    color: #fff;
+    color: #ffffff;
+    transition: background-color .3s ease;
 }
 
-.popup-header-close:active {
-    background-color: #940000;
+.popup-header-close:hover {
+    background-color: #9e0000;
 }
 
 .theme-btn {
+    background-color: #EFEFEF;
     width: 100px;
     height: 50px;
     margin: 4px;
     border-radius: 5px;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
     align-items: center;
+    transition: background-color .3s ease;
+}
+
+.theme-btn:hover {
+    background-color: #a8a8a8;
 }
 
 .options-btn {
@@ -92,13 +118,24 @@ body{
     cursor: pointer;
 }
 
-.fas, .fa-cogs {
-    font-size: 60px;
-    color: #000000;
+@keyframes option-spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(60deg);
+    }
 }
 
-.fas:active, .fa-cogs:active {
-    color: #5f5f5f;
+.fas, .fa-cog {
+    color: #000000;
+    font-size: 60px;
+    transition: color .5s;
+}
+
+.fas:hover, .fa-cog:hover {
+    color: #353535;
+    animation: option-spinner .5s both cubic-bezier(.47,.22,.2,.9);
 }
 
 .calculator-container {
@@ -109,25 +146,25 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 1rem;
-    box-shadow: 0px 0px 36px 6px rgba(0,0,0,0.64);
+    box-shadow: 0px 0px 36px 6px #000000a3;
 }
 
 .output-container {
-    background-color: rgb(27, 27, 27);
+    background-color: #1b1b1b;
     width: 280px;
     height: 200px;
     border-radius: 1rem 1rem 0rem 0rem;
 }
 
 .history-output {
-    color: rgb(126, 126, 126);
+    color: #7e7e7e;
     font-size: 30px;
     height: 80px;
     width: 280px;
 }
 
 .result-output {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     font-size: 60px;
     width: 280px;
 }
@@ -144,7 +181,7 @@ body{
 }
 
 .keyboard-container {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     width: 280px;
     height: 300px;
     border-radius: 0rem 0rem 1rem 1rem;
@@ -163,7 +200,7 @@ button {
     margin: 4px 6px;
     border-radius: 9rem;
     border: 0px solid black;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
 }
@@ -181,46 +218,48 @@ button:focus {
 }
 
 .number-btn {
-    background-color: rgb(212, 212, 212);
+    background-color: #d4d4d4;
 }
 
 .number-btn:active {
-    background-color: rgb(182, 182, 182);
+    background-color: #b6b6b6;
 }
 
 .operator-btn {
-    background-color: rgb(90, 90, 90);
+    background-color: #5a5a5a;
+    color: #ffffff
 }
 
 .operator-btn:active {
-    background-color: rgb(75, 75, 75);
+    background-color: #4b4b4b;
 }
 
 .equal-btn {
-    background-color: rgb(51, 51, 51);
-    color: rgb(255, 255, 255);
+    background-color: #333333;
+    color: #ffffff;
 }
 
 .equal-btn:active {
-    background-color: rgb(36, 36, 36);
-    color: rgb(255, 255, 255);
+    background-color: #242424;
+    color: #ffffff;
 }
 
 .equal-btn {
-    background-color: rgb(51, 51, 51);
-    color: rgb(255, 255, 255);
+    background-color: #333333;
+    color: #ffffff;
 }
 
 .equal-btn:active {
-    background-color: rgb(36, 36, 36);
-    color: rgb(255, 255, 255);
+    background-color: #242424;
+    color: #ffffff;
 }
 
 .del-btn, .modulo-btn, .negation-btn, .cancel-btn {
-    background-color: rgb(233, 232, 232);
+    background-color: #e8e9e9;
+    color: #000000;
 }
 
 .del-btn:active, .modulo-btn:active, .negation-btn:active, .cancel-btn:active {
-    background-color: rgb(197, 197, 197);
+    background-color: #c5c5c5;
 }
 
