@@ -11,6 +11,7 @@
 
   - [x] ***Improved animations***
   - [x] ***New animations***
+  - [x] ***Added dockerfile***
   
 - ### Bug fixes
 
